@@ -61,6 +61,9 @@
 
         _spritePosition.X += (int)(_spriteDirection.X * _spriteSpeed * _gameTime.ElapsedTime);
         _spritePosition.Y += (int)(_spriteDirection.Y * _spriteSpeed * _gameTime.ElapsedTime);
+
+        await Task.FromResult(true);
+
     }
 
     private async ValueTask Render(int width, int height)
